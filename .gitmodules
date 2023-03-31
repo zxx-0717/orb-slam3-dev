@@ -1,0 +1,9 @@
+[submodule "src/orb-slam3"]
+	path = src/orb-slam3
+	url = https://github.com/UZ-SLAMLab/ORB_SLAM3.git
+[submodule "src/libreasense2"]
+	path = src/libreasense2
+	url = https://github.com/IntelRealSense/librealsense.git
+[submodule "src/Panglin"]
+	path = src/Panglin
+	url = https://github.com/stevenlovegrove/Pangolin.git
