@@ -1,0 +1,106 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# System config
+#--------------------------------------------------------------------------------------------
+
+# When the variables are commented, the system doesn't load a previous session or not store the current one
+
+# If the LoadFile doesn't exist, the system give a message and create a new Atlas from scratch
+#System.LoadAtlasFromFile: "Session_MH01_MH02_MH03_Stereo60_Pseudo"
+
+# The store file is created from the current session, if a file with the same name exists it is deleted
+#System.SaveAtlasToFile: "Session_MH01_MH02_MH03_Stereo60_Pseudo"
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+File.version: "1.0"
+
+Camera.type: "PinHole"
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera1.fx: 3321.87079164082
+Camera1.fy: 3309.03508880671
+Camera1.cx: 697.037256398830
+Camera1.cy: 296.230900947758
+
+
+Camera1.k1: -0.201582751898430
+Camera1.k2: 9.99037496999716
+Camera1.p1: -0.00787513861840888
+Camera1.p2: 0.00247500624295330
+# Camera1.k3: -160.921353382613
+
+Camera2.fx: 3307.60923259502
+Camera2.fy: 3296.42872898514
+Camera2.cx: 653.956952559235
+Camera2.cy: 299.516605006703
+
+Camera2.k1: -0.0543353515182006
+Camera2.k2: 1.80405387910481
+Camera2.p1: -0.00576833081991693
+Camera2.p2: 0.00338187931022632
+# Camera2.k3: -23.5236450992995
+
+
+Camera.width: 1280
+Camera.height: 720
+# Camera.newWidth: 640
+# Camera.newHeight: 360
+# System.thFarPoints: 15
+
+# Camera frames per second 
+Camera.fps: 30
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 0
+
+Stereo.ThDepth: 60.0
+Stereo.T_c1_c2: !!opencv-matrix
+  rows: 4
+  cols: 4
+  dt: f
+  data: [0.999122840759554,0.000677985800312885, -0.0418699105302752, -0.0652814415973686,
+    -0.000888737856549152, 0.999987029434616, -0.00501508799070364, -0.000755525507030405,
+    0.0418659672954180, 0.00504790033446953, 0.999110484123069, -0.000910037937301907,
+    0,0,0,1.000000000000000]    
+# 0.999122840759554,-0.000888737856549152,0.0418659672954180,
+# 0.000677985800312885,0.999987029434616,0.00504790033446953,
+# -0.0418699105302752,-0.00501508799070364,0.999110484123069   
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1200
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500.0
+Viewer.imageViewScale: 0.8
+

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<package format="2">
+  <name>orbslam3</name>
+  <version>0.0.0</version>
+  <description>
+    orb-slam3
+  </description>
+
+  <maintainer email="ros2@todo.todo">todo</maintainer>
+
+  <author email="ros2@todo.todo">todo</author>
+
+  <license>GPLv3</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+
+  <build_depend>librealsense2</build_depend>
+  <build_depend>pangolin</build_depend>
+
+  <depend>libopencv-dev</depend>
+  <depend>eigen</depend>
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>
