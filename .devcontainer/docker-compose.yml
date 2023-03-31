@@ -1,0 +1,26 @@
+version: "3.6"
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - WORKSPACE=/workspaces/capella_orb_slam3_dev
+      target: dev
+    volumes:
+      - ../:/workspaces/capella_orb_slam3_dev
+      - /tmp/.X11-unix:/tmp/-X11-unix
+    devices:
+      - /dev/video0:/dev/video0
+      - /dev/video1:/dev/video1
+    environment:
+      - DISPLAY=:0
+    network_mode: bridge
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+      - apparmor:unconfined
+    command: sleep infinity
+    user: ros
+    

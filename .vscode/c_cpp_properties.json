@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/workspaces/capella_ros_docker/install/include/",
+                "/workspaces/capella_ros_docker/install/include/capella_ros_service_interfaces",
+                "/opt/ros/foxy/include/**",
+                "/usr/include/eigen3",
+                "/usr/include/pcl-1.10",
+                "/usr/include/opencv4/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "cStandard": "c99",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
