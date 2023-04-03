@@ -151,4 +151,5 @@
     ],
     "C_Cpp.errorSquiggles": "Enabled",
     "cmake.sourceDirectory": "${workspaceFolder}/src/capella_ros_launcher",
+    "ros.distro": "foxy",
 }

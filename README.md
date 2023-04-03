@@ -69,3 +69,12 @@ include_directories(
     1、git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
 
     2、使用 colcon build 编译（Terminal->tasks-> （install dependencies/build））
+
+    // 新建一个文件夹存放所有需要copy的文件，避免 mv 后出现更新提示
+    libreasense package.xml 更改catkin为ament_cmake
+
+    librealsense 编译依赖 https://blog.csdn.net/qq_45779334/article/details/124304087
+    libreasese 需要 x11_xrandr sudo apt-get install libxrandr-dev
+    sudo apt-get install libxinerama-dev
+    sudo apt-get install libsdl2-dev
+
