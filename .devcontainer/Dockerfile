@@ -6,7 +6,7 @@ COPY "files/sources.list" "/etc/apt/"
 RUN apt-get update \
     && apt-get -y install --no-install-recommends \
       ros-humble-rmw-cyclonedds-cpp \
-      libopencv-dev  zip bash-completion libeigen3-dev libboost-all-dev\
+      libopencv-dev  zip bash-completion libeigen3-dev libboost-all-dev libxrandr-dev libxinerama-dev libsdl2-dev\
     && apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*

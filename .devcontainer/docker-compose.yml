@@ -8,11 +8,16 @@ services:
         - WORKSPACE=/workspaces/capella_orb_slam3_dev
       target: dev
     volumes:
-      - ../:/workspaces/capella_orb_slam3_dev
-      - /tmp/.X11-unix:/tmp/-X11-unix
+      - ../:/workspaces/capella_ros_docker
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /etc/udev:/etc/udev
+      - /run/udev/control:/run/udev/control  
     devices:
+      - /dev/dri:/dev/dri
+      - /dev/ttyUSB0:/dev/ttyUSB0
       - /dev/video0:/dev/video0
       - /dev/video1:/dev/video1
+      - /dev/bus/usb:/dev/bus/usb
     environment:
       - DISPLAY=:0
     network_mode: bridge
