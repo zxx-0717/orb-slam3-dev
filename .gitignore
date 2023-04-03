@@ -1,0 +1,15 @@
+.env
+__pycache__
+
+build/*
+install/*
+log/*
+
+# /*.pbstream
+# /*.pgm
+# /*.png
+# /*.yaml
+
+/*.gv
+/*.pdf
+*.pyc
